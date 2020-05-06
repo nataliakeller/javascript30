@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drum</title>
+    <link rel="shortcut icon" href="/">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body onkeydown="keyCode(event)">
-    <section>
+<body onkeydown="tocar(event)" class="overlay">
+    <section class="overlay section-buttons">
         <div id="buttons">
-            <input type="button" value="A" id="dboom" onclick="boom.play()">
-            <input type="button" value="S" id="dclap" onclick="clap.play()" >
-            <input type="button" value="D" id="dhihat" onclick="hihat.play()">
-            <input type="button" value="F" id="dkick" onclick="kick.play()">
-            <input type="button" value="G" id="dopenhat" onclick="openhat.play()">
-            <input type="button" value="H" id="dride" onclick="ride.play()">
-            <input type="button" value="J" id="dsnare" onclick="snare.play()">
-            <input type="button" value="K" id="dtink" onclick="tink.play()">
-            <input type="button" value="L" id="dtom" onclick="tom.play()">
+            <input type="button" value="A" class="input" id="boom">
+            <input type="button" value="S" class="input" id="clap">
+            <input type="button" value="D" class="input" id="hihat">
+            <input type="button" value="F" class="input" id="kick">
+            <input type="button" value="G" class="input" id="openhat">
+            <input type="button" value="H" class="input" id="ride">
+            <input type="button" value="J" class="input" id="snare">
+            <input type="button" value="K" class="input" id="tink">
+            <input type="button" value="L" class="input" id="tom">
         </div>
 
         <div id="msg"></div>
