@@ -8,9 +8,6 @@
 <body>
     <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
   <script>
-    // Get your shorts on - this is an array workout!
-    // ## Array Cardio Day 1
-
     // Some data we can work with
 
     const inventors = [
@@ -48,15 +45,40 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    var birthdate = inventors.sort(function(inventor1, inventor2) {
+    
+    /* var birthdate = inventors.sort(function(inventor1, inventor2) {
       return inventor1.year - inventor2.year 
-    });
-    console.table(inventors)
+    }); */
+
+    /* var birthdate = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+    console.table(birthdate) */
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    
+    /* var everyoneAge = inventors.map(function yearslived(inventor){
+      var years = inventor.passed - inventor.year;
+      return years
+    });
+    const allYears = everyoneAge.reduce((acc, curr) => acc + curr)
+    console.table(everyoneAge)
+    console.log(allYears) */
+
 
     // 5. Sort the inventors by years lived
+    var inventorsYearsLived = inventors.sort(function(a, b) {
+      a.age = a.passed - a.year;
+      b.age = b.passed - b.year
+      if (a.age > b.age){
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+    //console.table(inventorsYearsLived);
+
+    var inventorsAge = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 :-1)
+    console.table(inventorsAge)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
